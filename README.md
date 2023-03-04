@@ -1,5 +1,5 @@
-# public-CodeCSE
-The public repository for CodeCSE.
+# CodeCSE
+A simple pre-trained model for code and comment embeddings using contrastive learning.
 
 ## Environment
 This model was trained and tested in Python 3.9. The dependencies are in the requirements.txt. This repository uses CodeBERT/GraphCodeBERT for data preparation. To initialize the submodule:
@@ -11,6 +11,8 @@ git submodule update
 ## Inference
 Run the example script for inference:
 ```sh
-GCB_PATH=./CodeBERT/GraphCodeBERT/codesearch PYTHONPATH=./CodeBERT/GraphCodeBERT/codesearch:./codecse:$PYTHONPATH python inference.py
+GCB_PATH=./CodeBERT/GraphCodeBERT/codesearch \
+PYTHONPATH=./CodeBERT/GraphCodeBERT/codesearch:./codecse:$PYTHONPATH \
+python inference.py
 ```
 _Note_: GraphCodeBERT is put at the beginning of `PATH` because Python has an internal 'parser' module, which conflicts with the package 'parser' in GraphCodeBERT/codesearch.
