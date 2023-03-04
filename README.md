@@ -9,4 +9,8 @@ git submodule update
 ```
 
 ## Inference
-To load and use the pretrained CodeCSE model, please fellow the steps below.
+Run the example script for inference:
+```sh
+GCB_PATH=./CodeBERT/GraphCodeBERT/codesearch PYTHONPATH=./CodeBERT/GraphCodeBERT/codesearch:./codecse:$PYTHONPATH python inference.py
+```
+_Note_: GraphCodeBERT is put at the beginning of `PATH` because Python has an internal 'parser' module, which conflicts with the package 'parser' in GraphCodeBERT/codesearch.

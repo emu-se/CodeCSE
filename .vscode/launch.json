@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "inference",
+            "type": "python",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "request": "launch",
+            "program": "inference.py",
+            "env": {
+                "GCB_PATH": "./CodeBERT/GraphCodeBERT/codesearch",
+                "PYTHONPATH": "./CodeBERT/GraphCodeBERT/codesearch:./codecse:$PYTHONPATH",
+                "CUDA_VISIBLE_DEVICES": "0"
+            },
+            "console": "integratedTerminal",
+            "justMyCode": false
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./CodeBERT/GraphCodeBERT/codesearch",
+        "./codecse",
+    ]
+}
